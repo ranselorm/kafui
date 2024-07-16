@@ -661,6 +661,12 @@ ul.top-info li p.info-text {
 
 /* Header area
 ================================================== */
+
+.test {
+  width: 250px;
+  height: 70px;
+  background-color: red;
+}
 .header {
   background: #fff;
   position: relative;
@@ -690,9 +696,6 @@ ul.top-info li p.info-text {
   .header-one ul.navbar-nav > li {
     padding-right: 0;
   }
-}
-.header-one .logo-area {
-  padding: 20px 0;
 }
 
 .navbar-fixed {
@@ -732,16 +735,33 @@ ul.navbar-nav > li.active > a {
 /*-- Logo --*/
 .logo img {
   width: auto;
-  height: 35px;
+  height: 90px;
+  margin-left: -80px;
 }
 
-.header-two .logo img {
-  height: 30px;
+@media (max-width: 767px) {
+  .logo img {
+    height: 80px;
+    margin-left: 0;
+  }
+  header-right {
+    display: none;
+  }
 }
-
 /* header right */
+
 .header-right {
   float: right;
+}
+
+@media (max-width: 767px) {
+  .logo img {
+    height: 80px;
+    margin-left: 0;
+  }
+  .header-right {
+    display: none;
+  }
 }
 
 ul.top-info-box {
