@@ -1222,7 +1222,24 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
   color: #fff;
   background-position: 50% 50%;
   background-size: cover;
+  position: relative;
 }
+/* Newly added overlay */
+
+.slider-overlay {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-items: center;
+  align-items: content;
+  width: 100%;
+  z-index: 10;
+  inset: 0;
+}
+.overlay-text {
+  opacity: 0;
+}
+
 @media (max-width: 991px) {
   .banner-carousel .banner-carousel-item {
     height: 550px;
@@ -1238,6 +1255,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
   position: relative;
   height: 100%;
   width: 100%;
+  z-index: 30;
 }
 
 .slide-title-box {
@@ -2176,12 +2194,18 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 .testimonial-slide .slick-dots {
   bottom: -35px;
 }
+.img-container {
+  float: left;
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+}
 
 img.testimonial-thumb {
-  max-width: 80px;
-  float: left;
-  margin-right: 20px;
-  border-radius: 5px;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
 }
 
 .quote-item-info {
@@ -2296,6 +2320,7 @@ img.testimonial-thumb {
 }
 
 /* Newsletter */
+
 .ts-newsletter {
   background: #252525;
   position: relative;
