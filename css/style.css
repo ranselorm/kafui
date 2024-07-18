@@ -1755,54 +1755,6 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 
 /* Service box 
 
-.ts-service-box .ts-service-icon i {
-  font-size: 24px;
-  float: left;
-  color: #fff;
-  background: $color-primary;
-  border-radius: 100%;
-  width: 60px;
-  height: 60px;
-  line-height: 60px;
-  text-align: center;
-}
-
-.ts-service-box .ts-service-box-content {
-  margin-left: 80px;
-  margin-bottom: 30px;
-}
-
-.tab-content .ts-service-box .ts-service-box-content {
-  margin-left: 90px;
-}
-
-.ts-service-box .ts-service-box-content h3 {
-  font-size: 18px;
-  margin-bottom: 15px;
-}
-
-.ts-service-box .ts-service-box-info {
-  margin-left: 90px;
-  margin-bottom: 40px;
-}
-
-.service-box-title {
-  font-size: 18px;
-  margin: 0 0 10px;
-}
-
-.service-box-title a {
-  color: #333;
-}
-
-.service-box-title a:hover {
-  color: $color-primary;
-}
-
-.service-center-img {
-  padding: 0 20px;
-}
-*/
 /* Icon squre */
 .ts-service-icon.icon-round i {
   font-size: 24px;
@@ -1852,6 +1804,15 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 /* Service Image */
 .ts-service-image-wrapper {
   margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+  /* width: 20px;  */
+  height: 300px; /* Fixed height for all image containers */
+}
+.ts-service-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the entire container */
 }
 
 .ts-service-icon i {
@@ -1929,24 +1890,36 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
 /* Project shuffle Item */
 .shuffle-item {
   padding: 0;
+  width: 33.3333%; /* 3 items per row for lg screens */
+}
+
+@media (max-width: 992px) {
+  .shuffle-item {
+    width: 50%; /* 2 items per row for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .shuffle-item {
+    width: 100%; /* 1 item per row for small screens */
+  }
 }
 .shuffle-item .project-img-container {
   position: relative;
   overflow: hidden;
+  height: 300px; /* Fixed height for all image containers */
 }
 .shuffle-item .project-img-container img {
   transform: perspective(1px) scale3d(1.1, 1.1, 1);
   transition: all 400ms;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the entire container */
 }
 .shuffle-item .project-img-container:hover img {
   transform: perspective(1px) scale3d(1.15, 1.15, 1);
 }
 
-/* ADDED */
-/* .img-container {
-  width: 0px;
-  height: 0px;
-} */
 .shuffle-item .project-img-container:after {
   opacity: 0;
   position: absolute;
@@ -2781,12 +2754,12 @@ img.testimonial-thumb {
 }
 .ts-team-wrapper .ts-team-content {
   position: absolute;
-  top: 76%;
+  top: 50%;
   left: 0;
   width: 100%;
   height: 100%;
   padding: 15px 25px;
-  margin-top: 0;
+  /* margin-top: 0; */
   color: #fff;
   background: rgba(0, 0, 0, 0.5);
   transition: 350ms;
