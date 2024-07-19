@@ -114,19 +114,6 @@
                         </div>
                       </div>
                     </li>
-                    <!-- <li class="last">
-                      <div class="info-box last">
-                        <div class="info-box-content">
-                          <p class="info-box-title">Global Certificate</p>
-                          <p class="info-box-subtitle">ISO 9001:2017</p>
-                        </div>
-                      </div>
-                    </li> -->
-                    <!-- <li class="header-get-a-quote">
-                      <a class="btn btn-primary" href="contact.html"
-                        >Get A Quote</a
-                      >
-                    </li> -->
                   </ul>
                   <!-- Ul end -->
                 </div>
@@ -158,7 +145,7 @@
 
                   <div id="navbar-collapse" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav mr-auto">
-                      <li class="nav-item dropdown active">
+                      <li class="nav-item dropdown">
                         <a href="index.html" class="nav-link dropdown-toggle"
                           >Home
                         </a>
@@ -1236,6 +1223,25 @@
       <!-- Javascript Files
   ================================================== -->
 
+      <script>
+        // Get the current URL path
+        var path = window.location.pathname;
+        // Get all nav items
+        var navItems = document.querySelectorAll(".nav-item");
+
+        navItems.forEach(function (item) {
+          // Get the href attribute of the nav link
+          var href = item.querySelector("a").getAttribute("href");
+          // Check if the href matches the current path
+          if (path.includes(href)) {
+            // Add the active class to the matching nav item
+            item.classList.add("active");
+          } else {
+            // Remove the active class from non-matching nav items
+            item.classList.remove("active");
+          }
+        });
+      </script>
       <!-- initialize jQuery Library -->
       <script src="plugins/jQuery/jquery.min.js"></script>
       <!-- Bootstrap jQuery -->
