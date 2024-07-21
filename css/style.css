@@ -2067,7 +2067,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
   position: relative;
   overflow: hidden;
   height: 300px; /* Same height as the image containers */
-  background-color: #000; /* Optional: background color to show before the video loads */
+  background-color: #ffae42; /* Optional: background color to show before the video loads */
 }
 
 .project-video-container iframe {
