@@ -2062,6 +2062,20 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
   margin-top: 15px;
 }
 
+/* Video container */
+.project-video-container {
+  position: relative;
+  overflow: hidden;
+  height: 300px; /* Same height as the image containers */
+  background-color: #000; /* Optional: background color to show before the video loads */
+}
+
+.project-video-container iframe {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the iframe covers the entire container */
+}
+
 /* Content area
 ================================================== */
 /* Accordion */
