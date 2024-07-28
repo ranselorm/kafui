@@ -84,6 +84,16 @@
       <!-- Existing HTML content -->
 
       <script src="scripts.js"></script>
+      <script>
+        function toggleFolder(folderId) {
+          const folder = document.getElementById(folderId);
+          if (folder.style.display === "none" || folder.style.display === "") {
+            folder.style.display = "block";
+          } else {
+            folder.style.display = "none";
+          }
+        }
+      </script>
       <!-- Existing scripts -->
     </div>
     <!-- Body inner end -->
