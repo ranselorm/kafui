@@ -472,12 +472,8 @@
             subtitle: "Stages of Residential Construction",
             stages: [
               {
-                image: "images/projects/project2_stage1.jpg",
-                description: "Stage 1 Description",
-              },
-              {
-                image: "images/projects/project2_stage2.jpg",
-                description: "Stage 2 Description",
+                image: "images/projects/pro2.jpg",
+                // description: "Stage 1 Description",
               },
             ],
           },
@@ -496,11 +492,60 @@
               },
               {
                 video: "https://www.youtube.com/embed/U30Ag-lsmbI",
-                description: "Stage 3 Video",
+                // description: "Stage 3 Video",
               },
             ],
           },
-          // Add more projects as needed
+          {
+            id: 4,
+            title: "Two story residential building at Baatsona, Spintex",
+            subtitle: "Stages of Residential Construction",
+            stages: [
+              {
+                image: "images/projects/pro12.jpg",
+                // description: "Stage 1 Description",
+              },
+              {
+                video: "https://www.youtube.com/embed/7M5gDzskfig",
+                // description: "Stage 3 Video",
+              },
+              {
+                video: "https://www.youtube.com/embed/wLx4d7vpnzg",
+                // description: "Stage 3 Video",
+              },
+              {
+                video: "https://www.youtube.com/embed/fFm-QQRRc_4",
+                // description: "Stage 3 Video",
+              },
+              {
+                video: "https://www.youtube.com/embed/qNhy-PMIIQo",
+                // description: "Stage 3 Video",
+              },
+            ],
+          },
+          {
+            id: 5,
+            title: "Two story residential building at Ashalaja, Accra",
+            subtitle: "Stages of Residential Construction",
+            stages: [
+              {
+                image: "images/projects/pro13.jpg",
+                // description: "Stage 1 Description",
+              },
+              {
+                image: "images/projects/pro14.jpg",
+                // description: "Stage 1 Description",
+              },
+              {
+                video: "https://www.youtube.com/embed/7M5gDzskfig",
+                // description: "Stage 3 Video",
+              },
+              {
+                video: "https://www.youtube.com/embed/wLx4d7vpnzg",
+                // description: "Stage 3 Video",
+              },
+            ],
+          },
         ];
 
         // Function to load project details based on project ID
@@ -518,29 +563,28 @@
 
               if (stage.image) {
                 stageElement.innerHTML = `
-            <div class="project-img-container">
-              <a class="gallery-popup" href="${stage.image}" aria-label="project-img">
-                <img class="img-fluid" src="${stage.image}" alt="stage-image" />
-                <span class="gallery-icon"><i class="fa fa-plus"></i></span>
-              </a>
-              <div class="project-item-info">
-                <div class="project-item-info-content">
-                  <p class="project-cat">${stage.description}</p>
-                </div>
-              </div>
-            </div>
-          `;
+                    <div class="project-img-container">
+                      <a class="gallery-popup" href="${stage.image}" aria-label="project-img">
+                        <img class="img-fluid" src="${stage.image}" alt="stage-image" />
+                        <span class="gallery-icon"><i class="fa fa-plus"></i></span>
+                      </a>
+                      <div class="project-item-info">
+                        <div class="project-item-info-content">
+                        </div>
+                      </div>
+                    </div>
+                  `;
               } else if (stage.video) {
                 stageElement.innerHTML = `
-            <div class="project-video-container">
-              <iframe class="img-fluid" src="${stage.video}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              <div class="project-item-info">
-                <div class="project-item-info-content">
-                  <p class="project-cat">${stage.description}</p>
-                </div>
-              </div>
-            </div>
-          `;
+                    <div class="project-video-container">
+                      <iframe class="img-fluid" src="${stage.video}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                      <div class="project-item-info">
+                        <div class="project-item-info-content">
+                          <p class="project-cat">${stage.description}</p>
+                        </div>
+                      </div>
+                    </div>
+                  `;
               }
 
               stagesContainer.appendChild(stageElement);
