@@ -2561,6 +2561,24 @@ img.testimonial-thumb {
   color: #fff;
 }
 
+.list-check li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 10px;
+  line-height: 24px;
+}
+
+.list-check li::before {
+  content: "\f00c"; /* FontAwesome check icon */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #ffae42; /* Yellowish color */
+  font-size: 14px;
+}
+
 /* Sub Pages
 ================================================== */
 /*-- Title border --*/
