@@ -2580,17 +2580,17 @@ img.testimonial-thumb {
 .banner-title {
   color: #fff;
   text-transform: uppercase;
-  font-size: 58px;
+  font-size: 40px;
   font-weight: 900;
 }
 @media (max-width: 767px) {
   .banner-title {
-    font-size: 48px;
+    font-size: 30px;
   }
 }
 @media (max-width: 575px) {
   .banner-title {
-    font-size: 32px;
+    font-size: 24px;
   }
 }
 
