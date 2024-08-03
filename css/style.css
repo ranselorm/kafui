@@ -1906,6 +1906,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
   position: relative;
   overflow: hidden;
   height: 300px;
+  border-radius: 10px;
 }
 .shuffle-item .project-img-container img {
   transform: perspective(1px) scale3d(1.1, 1.1, 1);
